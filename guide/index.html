@@ -32,7 +32,7 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <nav>
   <div class="brand"><i>✂</i> 쇼츠컷 설명서</div>
   <a href="#start">1. 시작하기</a><a class="sub" href="#install">설치와 첫 실행</a><a class="sub" href="#ai">AI 연결</a><a class="sub" href="#genai">그록 · Flow</a><a class="sub" href="#license">라이선스 키</a>
-  <a href="#shop">2. 쇼핑 쇼츠 만들기</a>
+  <a href="#shop">2. 쇼핑 쇼츠 만들기</a><a class="sub" href="#scriptai">✍ AI로 대본 쓰기</a>
   <a href="#long">3. 롱폼 → 쇼츠</a>
   <a href="#wide">4. 가로 롱폼 편집</a>
   <a href="#editor">5. 편집기 둘러보기</a><a class="sub" href="#p-media">미디어 · 훅 제목 · 광고 안내</a><a class="sub" href="#p-sub">자막 · 텍스트</a><a class="sub" href="#p-mask">가리기(모자이크)</a><a class="sub" href="#p-design">디자인</a>
@@ -64,6 +64,7 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <h3 id="ai">AI 연결</h3>
 <p>구간 선정, 훅 제목, 업로드 문안, 상품 대본은 AI가 씁니다. 홈 아래쪽 <b>AI 설정</b> 칸에서 <b>하나만</b> 고르면 됩니다. 여섯 개 중 무엇을 골라도 기능은 같고, <b>비용과 속도만 다릅니다.</b></p>
 
+<div class="note warn"><b>어떤 AI 를 쓰느냐에 따라 결과 품질이 크게 다릅니다.</b> 구간 선정·훅 제목·대본 모두 마찬가지입니다. 성능이 낮은 모델은 문장이 겉돌거나 같은 말을 되풀이하고, 지정한 길이도 잘 안 맞습니다. 무료 쪽(Ollama·Gemini 무료 한도)은 비용이 들지 않는 대신 이 차이가 큽니다. 결과가 마음에 안 들면 <b>모델을 바꿔 다시 시도</b>해 보시고, 어떤 AI 를 쓰든 <b>나온 글은 읽어 보고 고쳐서</b> 쓰세요.</div>
 <div class="note"><b>AI 사용료는 상품 가격에 포함되지 않습니다.</b> 무료로 쓰시려면 <b>Ollama</b>(내 PC, 완전 무료)나 <b>Gemini</b>(무료 한도)를 고르세요.</div>
 
 <table><tr><th>고를 것</th><th>비용</th><th>준비</th><th>넣는 칸</th></tr>
@@ -115,6 +116,20 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <li><span class="btn">쇼핑 쇼츠 만들기</span>를 누르면 받아쓰기와 AI 문안 작성이 돌고 편집기가 열립니다. 1~3분 걸립니다.</li>
 </ol>
 <div class="note"><b>영상과 자막은 어떻게 맞나요?</b> 낭독이 기준입니다. 자막은 낭독 음성에서 나오고, 영상은 낭독 길이를 각 영상 길이에 비례해 나눠 순서대로 놓입니다. 어느 문장에 어느 영상이 깔릴지는 편집기 트랙에서 조각 경계를 끌어 바꿉니다.</div>
+
+<h3 id="scriptai">✍ AI로 대본 쓰기</h3>
+<p>대본 칸 바로 위에 있습니다. <b>「AI 설정」에 연결해 둔 AI</b>가 낭독용 대본을 써 줍니다. 챗GPT 같은 데로 나갔다 올 필요가 없고, <b>쇼핑 쇼츠와 가로 롱폼 편집 양쪽에서</b> 씁니다.</p>
+<table><tr><th>물어보는 것</th><th>적는 것</th></tr>
+<tr><td><b>무엇에 대해</b><br><span class="dim">필수</span></td><td>한두 줄. 예) <code>겨울에 자동차 배터리가 방전되는 이유</code>. 자세할수록 결과가 좋아집니다</td></tr>
+<tr><td>성격</td><td>정보 전달 · 제품 안내 · 이야기 · 방법 안내</td></tr>
+<tr><td>길이</td><td>1분 ~ 60분. 낭독 기준으로 분량을 맞춰 씁니다</td></tr>
+<tr><td>꼭 넣을 말</td><td>선택. 쉼표로 구분 — 예) <code>시동, 블랙박스</code></td></tr>
+<tr><td>보는 사람</td><td>선택 — 예) <code>차를 처음 사신 분</code></td></tr></table>
+<p><b>제목·번호·괄호 지시문 없이 읽을 문장만</b> 나옵니다. 그대로 <span class="btn">🎙 대본으로 만들기</span> 를 누르면 낭독이 되고 자막까지 붙습니다.</p>
+<div class="note"><b>6분이 넘으면 나눠 씁니다.</b> 먼저 뼈대를 짜고 토막마다 씁니다 — 한 번에 길게 쓰면 뒤로 갈수록 같은 말을 되풀이하거나 분량이 모자랍니다.
+진행 상황이 「2/5 토막 쓰는 중…」처럼 보입니다. 대신 시간이 더 걸리고(8분짜리에 2~3분, 20분짜리면 5분쯤) AI 사용료도 그만큼 더 듭니다.</div>
+<div class="note warn"><b>나온 대본은 읽어 보고 고쳐서 쓰세요.</b> 어떤 AI 를 쓰느냐에 따라 품질이 크게 다르고, <b>AI 는 그럴듯한 수치를 지어낼 수 있습니다.</b>
+숫자·통계가 들어갔다면 반드시 직접 확인하세요.</div>
 
 <h2 id="long">3. <em>롱폼 → 쇼츠</em></h2>
 <div class="shot"><img src="img/03_results.jpg" alt="쇼츠 목록 — 카드마다 점수, 미리보기, AI가 고른 이유. 카드를 누르면 편집기" loading="lazy"><div class="cap">쇼츠 목록 — 카드마다 점수, 미리보기, AI가 고른 이유. 카드를 누르면 편집기</div></div>

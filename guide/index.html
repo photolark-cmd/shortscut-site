@@ -31,7 +31,7 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <body translate="no"><div class="wrap">
 <nav>
   <div class="brand"><i>✂</i> 쇼츠컷 설명서</div>
-  <a href="#start">1. 시작하기</a><a class="sub" href="#install">설치와 첫 실행</a><a class="sub" href="#ai">AI 연결</a><a class="sub" href="#license">라이선스 키</a>
+  <a href="#start">1. 시작하기</a><a class="sub" href="#install">설치와 첫 실행</a><a class="sub" href="#ai">AI 연결</a><a class="sub" href="#genai">그록 · Flow</a><a class="sub" href="#license">라이선스 키</a>
   <a href="#shop">2. 쇼핑 쇼츠 만들기</a>
   <a href="#long">3. 롱폼 → 쇼츠</a>
   <a href="#wide">4. 가로 롱폼 편집</a>
@@ -57,17 +57,44 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <li>처음 실행하면 영상 처리 도구(ffmpeg)를 자동으로 내려받습니다. 1~2분 걸리며 홈 위쪽에 진행 상태가 보입니다.</li>
 <li>브라우저를 닫아도 프로그램은 살아 있습니다. 다시 열려면 주소창에 <code>http://127.0.0.1:8796</code> 을 넣거나 실행.cmd 를 다시 누르세요.</li>
 </ol>
-<div class="shot"><img src="img/01_home.jpg" alt="홈 화면 — 위쪽에 모드 세 개, 그 아래 🔑 라이선스 칸과 내 프로젝트 목록" loading="lazy"><div class="cap">홈 화면 — 위쪽에 모드 세 개, 그 아래 🔑 라이선스 칸과 내 프로젝트 목록</div></div>
+<div class="shot"><img src="img/01_home.jpg" alt="홈 화면 — 프로그램 카드 세 개, 그 아래 내 프로젝트, 맨 아래 설정. 왼쪽 칸에 환경 점검" loading="lazy"><div class="cap">홈 화면 — 프로그램 카드 세 개, 그 아래 내 프로젝트, 맨 아래 설정. 왼쪽 칸에 환경 점검</div></div>
+<p><b>홈은 고르는 화면입니다.</b> 카드를 누르면 그 작업 화면으로 들어가고, 왼쪽 위 <span class="btn">← 홈</span> 으로 돌아옵니다. 설정(라이선스·AI·폰에서 쓰기)은 홈 아래쪽에, 환경 점검은 왼쪽 칸에 접혀 있습니다.</p>
 <p>필요한 환경: Windows 10/11, 인터넷(AI 호출·업데이트용). 자막 없는 영상을 받아쓸 때는 NVIDIA 그래픽카드가 있으면 훨씬 빠릅니다. 없어도 됩니다.</p>
 
 <h3 id="ai">AI 연결</h3>
-<p>대본 요약, 구간 선정, 훅 제목, 업로드 문안은 AI가 씁니다. 홈의 AI 설정 칸에서 하나를 고릅니다.</p>
-<table><tr><th>선택</th><th>비용</th><th>준비</th></tr>
-<tr><td>Claude Code(기본)</td><td>Claude 구독에 포함</td><td>PC에 Claude Code가 로그인돼 있으면 따로 할 것 없음</td></tr>
-<tr><td>Gemini</td><td>무료 한도 있음</td><td>Google AI Studio에서 API 키 발급 후 붙여넣기</td></tr>
-<tr><td>OpenAI</td><td>사용량 과금</td><td>API 키 붙여넣기</td></tr>
-<tr><td>Ollama</td><td>무료(내 PC)</td><td>Ollama 설치 후 모델 하나 내려받기. 느리지만 인터넷 없이 됨</td></tr></table>
-<p>키는 내 PC의 설정 파일에만 저장되고 어디로도 보내지 않습니다.</p>
+<p>구간 선정, 훅 제목, 업로드 문안, 상품 대본은 AI가 씁니다. 홈 아래쪽 <b>AI 설정</b> 칸에서 <b>하나만</b> 고르면 됩니다. 여섯 개 중 무엇을 골라도 기능은 같고, <b>비용과 속도만 다릅니다.</b></p>
+
+<div class="note"><b>AI 사용료는 상품 가격에 포함되지 않습니다.</b> 무료로 쓰시려면 <b>Ollama</b>(내 PC, 완전 무료)나 <b>Gemini</b>(무료 한도)를 고르세요.</div>
+
+<table><tr><th>고를 것</th><th>비용</th><th>준비</th><th>넣는 칸</th></tr>
+<tr><td><b>Ollama</b><br><span class="dim">내 PC</span></td><td>무료</td><td>ollama.com 에서 설치하고 명령창에 <code>ollama pull qwen2.5:14b</code>. 인터넷 없이 돌지만 느리고 메모리를 많이 씁니다</td><td>주소 <code>http://127.0.0.1:11434</code><br>모델 <code>qwen2.5:14b</code></td></tr>
+<tr><td><b>Gemini</b><br><span class="dim">구글</span></td><td>무료 한도</td><td>Google AI Studio 에서 API 키 발급</td><td>키 <code>AIza…</code><br>모델 <code>gemini-2.5-flash</code></td></tr>
+<tr><td><b>Claude Code</b></td><td>Claude 구독에 포함</td><td>이 PC 에 Claude Code 가 설치·로그인돼 있으면 <b>따로 넣을 것이 없습니다</b></td><td>없음</td></tr>
+<tr><td><b>Claude API</b><br><span class="dim">Anthropic</span></td><td>사용량 과금</td><td>console.anthropic.com 에서 API 키 발급</td><td>키 <code>sk-ant-…</code><br>모델 <code>claude-sonnet-5</code></td></tr>
+<tr><td><b>OpenAI</b></td><td>사용량 과금</td><td>platform.openai.com 에서 API 키 발급</td><td>키 <code>sk-…</code><br>모델 <code>gpt-4.1-mini</code></td></tr>
+<tr><td><b>xAI Grok</b></td><td>사용량 과금<br><span class="dim">X 구독과 별개</span></td><td>console.x.ai 에서 API 키 발급</td><td>키 <code>xai-…</code><br>모델 <code>grok-4-3</code></td></tr>
+</table>
+
+<h4 style="margin:18px 0 6px">넣는 순서</h4>
+<ol>
+<li>홈 아래 <b>AI 설정</b> 칸을 펼칩니다.</li>
+<li>타일 여섯 개 중 하나를 누릅니다. 고른 타일 아래에만 입력 칸이 나타납니다.</li>
+<li>API 키를 붙여 넣습니다. <b>모델 칸은 비워 두셔도 됩니다</b> — 비우면 위 표의 기본값이 쓰입니다.</li>
+<li><span class="btn">저장</span> 을 누릅니다. 칸에 연결 상태가 표시됩니다.</li>
+</ol>
+
+<div class="note"><b>키는 이 PC 의 설정 파일에만 저장되고 어디로도 보내지 않습니다.</b> 저장된 키는 화면에 다시 보이지 않으며, 바꾸려면 새 키를 넣고 저장하면 됩니다.</div>
+
+<h4 style="margin:18px 0 6px">깊이 (롱폼 → 쇼츠)</h4>
+<p>「롱폼 → 쇼츠」에는 <b>깊이</b>를 고르는 칸이 따로 있습니다. AI 가 얼마나 오래 생각할지입니다.</p>
+<table><tr><th>값</th><th>걸리는 시간</th><th>언제</th></tr>
+<tr><td><code>low</code></td><td>1분 안팎</td><td>보통은 이걸로 충분합니다</td></tr>
+<tr><td><code>medium</code></td><td>중간</td><td>구간이 마음에 안 들 때</td></tr>
+<tr><td><code>high</code></td><td>느림</td><td>영상이 길고 내용이 복잡할 때</td></tr></table>
+
+<h3 id="genai">그록 · Flow 영상 만들기</h3>
+<p>쇼핑 쇼츠 화면의 <span class="btn">🎬 그록으로 영상 만들기</span> · <span class="btn">🖼 Flow로 이미지 뽑기</span> 는 <b>이미지·영상을 AI 로 새로 만드는</b> 기능입니다. 제품 영상 소재가 없을 때 쓰는 보조 기능입니다.</p>
+<div class="note"><b>이 두 기능은 별도 도구가 필요하며 현재 상품에 포함돼 있지 않습니다.</b> 도구가 없는 PC 에서 단추를 누르면 「미연결」로 끝나고, 다른 기능에는 영향이 없습니다. 영상 소재는 <b>판매자·제조사가 배포용으로 제공한 파일</b>, <b>사용 조건이 명시된 스톡 영상</b>, <b>직접 촬영한 것</b>으로 준비하시면 됩니다.</div>
 
 <h3 id="license">라이선스 키 등록</h3>
 <ol>
@@ -166,6 +193,10 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <li><span class="btn">캡컷</span> — 이 쇼츠의 컷·자막·텍스트·낭독을 CapCut 프로젝트로 씁니다. CapCut을 닫은 상태에서 누르고, 다음에 CapCut을 열면 프로젝트 목록에 나타납니다. 캡컷에서 마저 손보고 싶을 때 씁니다.</li>
 <li>렌더 시간은 30초 쇼츠 기준 보통 1~3분입니다. 렌더 중에는 홈 카드에 진행률이 보이고 다른 프로젝트를 편집해도 됩니다.</li>
 </ul>
+<div class="note"><b>출력 해상도는 풀HD(1080p)까지입니다.</b> 편집기 「디자인」의 출력 형식에서 고를 수 있는 것은
+<b>세로 쇼츠 1080×1920 · 가로 롱폼 1920×1080 · 정사각 1080×1080</b> 세 가지이고, <b>2K·4K 출력은 지원하지 않습니다.</b>
+4K 원본을 넣으셔도 1080p 로 줄여서 작업하고, 유튜브 링크로 받는 영상도 1080p 까지 받습니다.
+쇼츠·릴스·틱톡은 1080×1920 이 표준이라 대부분의 쓰임에는 이 해상도로 충분합니다.</div>
 
 <h2 id="update">8. <em>업데이트</em></h2>
 <p>홈 위쪽 <span class="btn">⟳ 업데이트 확인</span>을 누르면 새 판이 있는지 보고 받습니다. 프로젝트·설정·라이선스는 그대로 두고 프로그램 파일만 바뀝니다. 이용 기간 안에는 모든 업데이트가 포함됩니다.</p>

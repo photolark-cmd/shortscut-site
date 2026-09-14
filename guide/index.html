@@ -35,7 +35,7 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
   <a href="#shop">2. 쇼핑 쇼츠 만들기</a><a class="sub" href="#scriptai">✍ AI로 대본 쓰기</a>
   <a href="#long">3. 롱폼 → 쇼츠</a>
   <a href="#wide">4. 가로 롱폼 편집</a>
-  <a href="#editor">5. 편집기 둘러보기</a><a class="sub" href="#p-media">미디어 · 훅 제목 · 광고 안내</a><a class="sub" href="#p-sub">자막 · 텍스트</a><a class="sub" href="#p-bin">소재함 · 무료 소재</a><a class="sub" href="#p-mask">가리기(모자이크)</a><a class="sub" href="#p-design">디자인</a>
+  <a href="#editor">5. 편집기 둘러보기</a><a class="sub" href="#p-media">미디어 · 훅 제목 · 광고 안내</a><a class="sub" href="#p-sub">자막 · 텍스트</a><a class="sub" href="#p-bin">소재함 · 무료 소재</a><a class="sub" href="#stock-key">무료 소재 키 발급</a><a class="sub" href="#p-mask">가리기(모자이크)</a><a class="sub" href="#p-design">디자인</a>
   <a href="#preview">6. 미리보기와 트랙</a><a class="sub" href="#safezone">앱 화면 겹쳐 보기</a><a class="sub" href="#volume">미리듣기 · 결과물 음량</a>
   <a href="#render">7. 렌더 · 내보내기 · 캡컷</a>
   <a href="#update">8. 업데이트</a>
@@ -192,6 +192,24 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <li><b>무료 소재 탭</b> — Pexels · Pixabay 의 무료 영상·사진을 찾아 담습니다. 상업 이용 가능, 출처 표기 의무 없음(내보내기 설명에 출처를 예의로 붙여 줍니다). <b>본인 무료 API 키</b>가 필요합니다: <a href="https://www.pexels.com/api/" target="_blank" rel="noopener">pexels.com/api</a>, <a href="https://pixabay.com/api/docs/" target="_blank" rel="noopener">pixabay.com/api/docs</a> 에서 가입하면 바로 나오고, 탭의 「키 설정」에 붙여 넣으면 끝입니다. 검색어는 한글로 넣어도 됩니다(AI 가 영어로 바꿔 찾습니다). 결과 위에 마우스를 올리면 영상이 미리 돌고, <span class="btn">＋ 담기</span>로 소재함에 들어옵니다. 「크게 보고 여러 개 담기」에서는 여러 개를 골라 한 번에 담습니다.</li>
 <li><b>쇼핑 쇼츠에서 무료 소재는 분위기 컷(B롤)으로만</b> 쓰세요. 제품과 무관한 영상을 제품 장면처럼 쓰면 광고 표시 문제가 됩니다.</li>
 </ul>
+<h3 id="stock-key">무료 소재 키 발급 — Pexels · Pixabay (둘 다 무료, 5분)</h3>
+<p>무료 소재 검색은 두 사이트의 API 를 쓰는데, 사이트가 "누가 얼마나 쓰는지" 세려고 사용자마다 키를 나눠 줍니다. 가입만 하면 바로 나오고 돈은 들지 않습니다. 둘 중 하나만 있어도 되고, 둘 다 넣으면 검색할 때 골라 쓸 수 있습니다.</p>
+<div class="note"><b>Pexels</b> — 영상이 많고 화질이 좋습니다. 영어 검색이 정확한데, 프로그램이 한글을 영어로 바꿔 보냅니다.
+<ol>
+<li><a href="https://www.pexels.com/api/" target="_blank" rel="noopener">pexels.com/api</a> 를 열고 <b>Get Started</b>(또는 Your API Key)를 누릅니다.</li>
+<li>회원가입: 이메일과 비밀번호만 넣으면 됩니다(구글 계정으로도 됩니다). 가입 메일이 오면 확인 링크를 누릅니다.</li>
+<li>로그인한 뒤 다시 pexels.com/api 로 가면 <b>Your API Key</b> 칸에 긴 글자(영문·숫자 56자쯤)가 보입니다. 처음이면 "무엇에 쓸 건지" 짧게 묻는 칸이 나오는데 「영상 편집 프로그램에서 소재 검색」이라고 적으면 됩니다.</li>
+<li>그 글자를 전부 복사합니다.</li>
+</ol>
+한도: 시간당 200회, 한 달 2만 회. 개인 편집에는 충분합니다.</div>
+<div class="note"><b>Pixabay</b> — 사진이 많고 한글 검색이 그대로 됩니다.
+<ol>
+<li><a href="https://pixabay.com/api/docs/" target="_blank" rel="noopener">pixabay.com/api/docs</a> 를 엽니다. 로그인이 안 돼 있으면 오른쪽 위 <b>Join</b> 으로 가입합니다(이메일 또는 구글 계정).</li>
+<li>로그인한 상태로 같은 페이지를 다시 열면 <b>Parameters</b> 표의 <b>key</b> 줄에 본인 키가 이미 채워져 있습니다(숫자-영문 조합). 그 값을 복사합니다.</li>
+</ol>
+한도: 분당 100회. 역시 충분합니다.</div>
+<p><b>프로그램에 넣기</b> — 쇼핑 쇼츠나 가로 롱폼 편집기 왼쪽의 <b>「무료 소재」 탭</b> → 오른쪽 위 <span class="btn">키 설정</span> → Pexels 칸·Pixabay 칸에 붙여 넣고 <span class="btn">저장</span>. 키는 이 PC 의 설정 파일(config.json)에만 저장되고 밖으로 나가지 않습니다. 저장한 뒤 검색어를 넣고 <span class="btn">찾기</span>를 누르면 됩니다. 「키가 없습니다」라고 나오면 붙여 넣을 때 앞뒤 공백이 섞였는지 확인하세요.</p>
+<p class="small dim">라이선스: Pexels License · Pixabay Content License 모두 상업 이용 가능, 출처 표기 의무 없음. 다만 소재를 그대로 팔거나(스톡 사이트 재판매), 실제 인물을 나쁘게 보이게 쓰는 건 금지입니다. 프로그램이 내보내기 설명에 출처를 자동으로 붙여 줍니다.</p>
 
 <h3 id="p-media">미디어 · 훅 제목 · 광고 안내 · 채널 · 업로드 문안</h3>
 <div class="shot"><img src="img/05_hook_aff.jpg" alt="훅 제목 칸과 그 아래 광고 안내 칸" loading="lazy"><div class="cap">훅 제목 칸과 그 아래 광고 안내 칸</div></div>

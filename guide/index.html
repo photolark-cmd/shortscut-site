@@ -31,7 +31,7 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <body translate="no"><div class="wrap">
 <nav>
   <div class="brand"><i>✂</i> 쇼츠컷 설명서</div>
-  <a href="#start">1. 시작하기</a><a class="sub" href="#install">설치와 첫 실행</a><a class="sub" href="#ai">AI 연결</a><a class="sub" href="#genai">그록 · Flow</a><a class="sub" href="#license">라이선스 키</a>
+  <a href="#start">1. 시작하기</a><a class="sub" href="#install">설치와 첫 실행</a><a class="sub" href="#spec">내 컴퓨터 사양</a><a class="sub" href="#ai">AI 연결</a><a class="sub" href="#genai">그록 · Flow</a><a class="sub" href="#license">라이선스 키</a>
   <a href="#shop">2. 쇼핑 쇼츠 만들기</a><a class="sub" href="#scriptai">✍ AI로 대본 쓰기</a>
   <a href="#long">3. 롱폼 → 쇼츠</a>
   <a href="#wide">4. 가로 롱폼 편집</a>
@@ -59,7 +59,35 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 </ol>
 <div class="shot"><img src="img/01_home.jpg" alt="홈 화면 — 프로그램 카드 세 개, 그 아래 내 프로젝트, 맨 아래 설정. 왼쪽 칸에 환경 점검" loading="lazy"><div class="cap">홈 화면 — 프로그램 카드 세 개, 그 아래 내 프로젝트, 맨 아래 설정. 왼쪽 칸에 환경 점검</div></div>
 <p><b>홈은 고르는 화면입니다.</b> 카드를 누르면 그 작업 화면으로 들어가고, 왼쪽 위 <span class="btn">← 홈</span> 으로 돌아옵니다. 설정(라이선스·AI·폰에서 쓰기)은 홈 아래쪽에, 환경 점검은 왼쪽 칸에 접혀 있습니다.</p>
-<p>필요한 환경: Windows 10/11, 인터넷(AI 호출·업데이트용). 자막 없는 영상을 받아쓸 때는 NVIDIA 그래픽카드가 있으면 훨씬 빠릅니다. 없어도 됩니다.</p>
+<p>필요한 환경: Windows 10/11 64비트, 인터넷(AI 호출·업데이트용). 자세한 사양은 바로 아래 <a href="#spec">내 컴퓨터 사양</a>을 보세요.</p>
+
+<h3 id="spec">내 컴퓨터 사양 — 최소 · 표준 · 추천</h3>
+<p>쇼츠컷은 서버 없이 <b>내 PC의 힘으로</b> 돌아갑니다. 그래서 컴퓨터가 느리면 프로그램도 느립니다. 특히 <b>미리보기가 끊기는 것</b>은 대부분 프로그램 고장이 아니라 그 순간 컴퓨터가 다른 일로 바쁜 것입니다(아래 「미리보기가 끊겨요」).</p>
+<table>
+<tr><th></th><th>최소</th><th>표준</th><th>추천</th></tr>
+<tr><td>CPU</td><td>4코어 (인텔 i5 8세대 · 라이젠 5 2세대급)</td><td>6~8코어 (i5 12세대 · 라이젠 5 5600급)</td><td>8코어 이상 (i7 12세대 · 라이젠 7 5800급 이상)</td></tr>
+<tr><td>메모리</td><td>8GB</td><td>16GB</td><td>32GB</td></tr>
+<tr><td>그래픽</td><td>내장 그래픽</td><td>NVIDIA GTX 1660 (6GB) 이상</td><td>NVIDIA RTX 3060 (8GB) 이상</td></tr>
+<tr><td>저장 장치</td><td>SSD 10GB 여유</td><td>SSD 50GB 여유</td><td>NVMe SSD 100GB 여유</td></tr>
+<tr><td>화면</td><td>1366×768</td><td>1920×1080</td><td>1920×1080 이상, 모니터 2대</td></tr>
+<tr><td>브라우저</td><td colspan="3">크롬 또는 엣지 최신판 (프로그램 화면이 브라우저에서 열립니다)</td></tr>
+</table>
+<ul>
+<li><b>최소 사양에서 되는 것</b> — 쇼핑 쇼츠·롱폼→쇼츠 제작 전부. 다만 1분 쇼츠 렌더에 1~2분, 받아쓰기(자막 없는 영상)는 CPU 로 돌아 영상 길이만큼 걸립니다.</li>
+<li><b>표준 사양</b> — 1분 쇼츠 렌더 20~40초. NVIDIA 카드가 있으면 받아쓰기가 GPU 로 돌아 몇 배 빨라집니다.</li>
+<li><b>추천 사양</b> — 렌더와 받아쓰기를 돌리면서 편집을 이어 할 수 있는 수준. 4K 원본이나 20분 넘는 롱폼을 자주 다루면 여기가 맞습니다.</li>
+<li><b>노트북</b>은 같은 이름의 CPU 라도 데스크톱보다 느리고, <b>배터리 모드</b>에서는 성능을 절반으로 낮추는 경우가 많습니다. 편집할 때는 전원을 꽂고 전원 옵션을 「고성능」으로 두세요.</li>
+<li>애플 실리콘 맥·리눅스는 지원하지 않습니다. 맥의 윈도우 가상 머신은 미리보기가 끊겨 권하지 않습니다.</li>
+</ul>
+<div class="note"><b>미리보기가 끊겨요 / 영상이 튀어요</b> — 렌더 결과물에는 영향이 없습니다. 미리보기는 브라우저가 원본 영상을 실시간으로 풀어 보여 주는 것이라 그 순간 CPU 가 바쁘면 프레임이 튑니다. 순서대로 확인하세요.
+<ol>
+<li><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd> 로 작업 관리자를 열고 <b>CPU 열</b>을 봅니다. 쇼츠컷이 아닌 다른 프로그램(다른 영상 편집·인코딩·받아쓰기·게임·백업·바이러스 검사·클라우드 동기화)이 30% 넘게 쓰고 있으면 그게 원인입니다. 끝나길 기다리거나 닫습니다.</li>
+<li>브라우저 탭이 수십 개 열려 있으면 그것만으로 코어를 씁니다. 쓰지 않는 창을 닫습니다.</li>
+<li>노트북이면 전원을 꽂고 「고성능」 전원 옵션으로 바꿉니다.</li>
+<li>원본이 4K 이거나 60fps 이면 미리보기가 무겁습니다. 편집은 1080p 로 변환한 파일로 하고, 결과는 그대로 씁니다.</li>
+<li>컴퓨터를 며칠째 안 껐다면 한 번 재부팅합니다.</li>
+<li>그래도 계속되면 프로그램 위쪽 「문제 신고」 파일과 함께 shortscut.kr 폼으로 보내 주세요. 사양과 함께 적어 주시면 빨리 봅니다.</li>
+</ol></div>
 
 <h3 id="ai">AI 연결</h3>
 <p>구간 선정, 훅 제목, 업로드 문안, 상품 대본은 AI가 씁니다. 홈 아래쪽 <b>AI 설정</b> 칸에서 <b>하나만</b> 고르면 됩니다. 여섯 개 중 무엇을 골라도 기능은 같고, <b>비용과 속도만 다릅니다.</b></p>
@@ -224,6 +252,7 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <p>홈 위쪽 <span class="btn">⟳ 업데이트 확인</span>을 누르면 새 판이 있는지 보고 받습니다. 프로젝트·설정·라이선스는 그대로 두고 프로그램 파일만 바뀝니다. 이용 기간 안에는 모든 업데이트가 포함됩니다.</p>
 
 <h2 id="faq">9. <em>자주 묻는 질문</em></h2>
+<details><summary>미리보기가 끊기거나 영상이 튀어요</summary><p>대부분 그 순간 컴퓨터가 다른 일로 바쁜 것이고 결과물에는 영향이 없습니다. <a href="#spec">내 컴퓨터 사양</a>의 확인 순서를 따라 보세요. 작업 관리자에서 CPU 를 많이 쓰는 다른 프로그램을 끝내는 것이 첫 번째입니다.</p></details>
 <details><summary>실행.cmd를 눌렀는데 브라우저가 안 열려요</summary><p>검은 창에 오류가 있는지 보세요. 창이 바로 닫히면 압축을 덜 풀었거나 폴더 안에 파일이 빠진 경우입니다. 창은 떠 있는데 브라우저만 안 열리면 주소창에 <code>http://127.0.0.1:8796</code> 을 직접 넣으세요.</p></details>
 <details><summary>ffmpeg 를 못 찾는다고 나와요</summary><p>홈 위쪽 안내 띠의 「받기」를 누르면 자동으로 내려받습니다. 회사 망처럼 내려받기가 막힌 곳이면 ffmpeg.exe 를 구해 프로그램 폴더의 <code>bin</code> 에 넣으면 됩니다.</p></details>
 <details><summary>키를 넣었는데 「이 PC 전용 키가 아닙니다」라고 해요</summary><p>키는 발급할 때 준 PC 코드에 묶입니다. 라이선스 칸의 「내 PC 코드」가 발급 때 보낸 것과 같은지 확인하고, PC를 바꿨다면 새 코드로 재발급을 요청하세요.</p></details>

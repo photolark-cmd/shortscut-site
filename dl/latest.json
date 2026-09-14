@@ -1,8 +1,8 @@
 {
- "version": "1.0.1",
- "url": "https://shortscut.kr/dl/shortscut-1.0.1-update.zip",
- "notes": "7일 체험판 · 수퍼토닉 무료 목소리 10종 · 다국어 목소리",
+ "version": "1.0.2",
+ "url": "https://shortscut.kr/dl/shortscut-1.0.2-update.zip",
+ "notes": "소재함(탭·격자·끌어 놓기·오디오·탐색기 드롭) · 무료 소재(Pexels·Pixabay) · 가리기 구간 지정 · 칸 너비 손잡이 · 미리보기 클릭 재생 · 텍스트 바로 고치기 · 7일 체험판",
  "date": "2026-09-14",
- "size": 476703,
- "sha256": "404ef6ab38cc68a63c0a49dbfe946173b2ba3a641d35ff639791fdd754cbd43d"
+ "size": 495297,
+ "sha256": "c1912079c0a13dd19ded9a690b950cb04066f5cfd4e6e1e87a45581b6ee73280"
 }

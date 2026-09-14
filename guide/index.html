@@ -39,7 +39,7 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <body translate="no"><div class="wrap">
 <nav>
   <div class="brand"><i>✂</i> 쇼츠컷 설명서</div>
-  <a href="#start">1. 시작하기</a><a class="sub" href="#install">설치와 첫 실행</a><a class="sub" href="#spec">내 컴퓨터 사양</a><a class="sub" href="#ai">AI 연결</a><a class="sub" href="#genai">그록 · Flow</a><a class="sub" href="#license">라이선스 키</a>
+  <a href="#start">1. 시작하기</a><a class="sub" href="#install">설치와 첫 실행</a><a class="sub" href="#spec">내 컴퓨터 사양</a><a class="sub" href="#ai">AI 고르기 (5분)</a><a class="sub" href="#genai">그록 · Flow</a><a class="sub" href="#license">라이선스 키</a>
   <a href="#shop">2. 쇼핑 쇼츠 만들기</a><a class="sub" href="#scriptai">✍ AI로 대본 쓰기</a>
   <a href="#long">3. 롱폼 → 쇼츠</a>
   <a href="#wide">4. 가로 롱폼 편집</a>
@@ -97,30 +97,47 @@ details{background:var(--bg2);border:1px solid var(--line);border-radius:10px;pa
 <li>그래도 계속되면 프로그램 위쪽 「문제 신고」 파일과 함께 shortscut.kr 폼으로 보내 주세요. 사양과 함께 적어 주시면 빨리 봅니다.</li>
 </ol></div>
 
-<h3 id="ai">AI 연결</h3>
-<p>구간 선정, 훅 제목, 업로드 문안, 상품 대본은 AI가 씁니다. 홈 아래쪽 <b>AI 설정</b> 칸에서 <b>하나만</b> 고르면 됩니다. 여섯 개 중 무엇을 골라도 기능은 같고, <b>비용과 속도만 다릅니다.</b></p>
+<h3 id="ai">AI 고르기 — 처음이면 5분</h3>
+<p>구간 선정, 훅 제목, 업로드 문안, 상품 대본은 AI 가 씁니다. 쇼츠컷은 AI 를 <b>안에 넣어 팔지 않고</b>, 여러분이 고른 AI 를 붙여 쓰는 구조입니다. 그래서 딱 한 번, 어느 AI 를 쓸지 골라 키를 넣어야 합니다. <b>어렵게 느껴지는 건 이 한 번뿐이고, 아래 순서대로 하면 5분입니다.</b></p>
+<div class="shot"><img src="img/09_ai.jpg" alt="홈 「AI 설정」 — 위 안내 띠 → 타일 하나 → 키 붙여 넣기 → 저장 → 연결 확인" loading="lazy"><div class="cap">홈 「AI 설정」 — 위 안내 띠 → 타일 하나 → 키 붙여 넣기 → 저장 → 연결 확인</div></div>
 
-<div class="note warn"><b>어떤 AI 를 쓰느냐에 따라 결과 품질이 크게 다릅니다.</b> 구간 선정·훅 제목·대본 모두 마찬가지입니다. 성능이 낮은 모델은 문장이 겉돌거나 같은 말을 되풀이하고, 지정한 길이도 잘 안 맞습니다. 무료 쪽(Ollama·Gemini 무료 한도)은 비용이 들지 않는 대신 이 차이가 큽니다. 결과가 마음에 안 들면 <b>모델을 바꿔 다시 시도</b>해 보시고, 어떤 AI 를 쓰든 <b>나온 글은 읽어 보고 고쳐서</b> 쓰세요.</div>
-<div class="note"><b>AI 사용료는 상품 가격에 포함되지 않습니다.</b> 무료로 쓰시려면 <b>Ollama</b>(내 PC, 완전 무료)나 <b>Gemini</b>(무료 한도)를 고르세요.</div>
+<div class="note"><b>먼저 헷갈리는 것 하나.</b> ChatGPT Plus, 제미나이 어드밴스드 같은 <b>구독</b>은 사람이 채팅창에서 쓰는 권한이고, 프로그램이 대신 쓰려면 <b>API 키</b>라는 긴 글자열이 따로 필요합니다. 구독이 있어도 키는 별개이며, 키는 쓴 만큼 아주 적게 과금됩니다(쇼츠 열 개 구간 선정에 보통 수십 원). 무료로 시작하려면 아래 Gemini 길을 따르세요.</div>
 
+<h4 style="margin:18px 0 6px">가장 쉬운 길 — Gemini 무료 키 (구글 계정만 있으면 됨)</h4>
+<ol>
+<li>홈 아래 <b>AI 설정</b> 칸을 펼치고 <b>Gemini</b> 타일을 누릅니다.</li>
+<li>안내 띠의 <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> 를 누르면 구글 AI 스튜디오가 열립니다. 구글 계정으로 로그인합니다(처음이면 이용약관 동의 한 번).</li>
+<li>파란 <b>「API 키 만들기」</b>(Create API key)를 누릅니다. 프로젝트를 고르라고 하면 <b>「새 프로젝트에서 만들기」</b>를 그대로 누르면 됩니다.</li>
+<li><code>AIza…</code> 로 시작하는 긴 글자열이 나오면 <b>복사</b>합니다. 이 글자열이 키이고, 비밀번호처럼 다른 사람에게 보여 주면 안 됩니다.</li>
+<li>쇼츠컷으로 돌아와 <b>API 키</b> 칸에 붙여 넣고 <span class="btn">저장</span>. 모델 칸은 비워 두면 기본값(gemini-2.5-flash)이 쓰입니다.</li>
+<li><span class="btn">연결 확인</span>을 누릅니다. <b>「✓ 연결됨」</b>이 뜨면 끝입니다. 「✕ 실패」가 뜨면 옆의 문장이 원인을 알려 줍니다(키 오타·한도·주소).</li>
+</ol>
+<div class="note">무료 한도는 하루 기준으로 넉넉해서 개인 채널 운영에는 대개 충분합니다. 한도가 차면 「✕ 실패 … 한도」로 알려 주고, 잠시 뒤 다시 하거나 구글에서 결제를 켜면 이어 쓸 수 있습니다.</div>
+
+<h4 style="margin:18px 0 6px">이미 쓰는 AI 가 있으면</h4>
 <table><tr><th>고를 것</th><th>비용</th><th>준비</th><th>넣는 칸</th></tr>
-<tr><td><b>Ollama</b><br><span class="dim">내 PC</span></td><td>무료</td><td>ollama.com 에서 설치하고 명령창에 <code>ollama pull qwen2.5:14b</code>. 인터넷 없이 돌지만 느리고 메모리를 많이 씁니다</td><td>주소 <code>http://127.0.0.1:11434</code><br>모델 <code>qwen2.5:14b</code></td></tr>
-<tr><td><b>Gemini</b><br><span class="dim">구글</span></td><td>무료 한도</td><td>Google AI Studio 에서 API 키 발급</td><td>키 <code>AIza…</code><br>모델 <code>gemini-2.5-flash</code></td></tr>
-<tr><td><b>Claude Code</b></td><td>Claude 구독에 포함</td><td>이 PC 에 Claude Code 가 설치·로그인돼 있으면 <b>따로 넣을 것이 없습니다</b></td><td>없음</td></tr>
-<tr><td><b>Claude API</b><br><span class="dim">Anthropic</span></td><td>사용량 과금</td><td>console.anthropic.com 에서 API 키 발급</td><td>키 <code>sk-ant-…</code><br>모델 <code>claude-sonnet-5</code></td></tr>
-<tr><td><b>OpenAI</b></td><td>사용량 과금</td><td>platform.openai.com 에서 API 키 발급</td><td>키 <code>sk-…</code><br>모델 <code>gpt-4.1-mini</code></td></tr>
+<tr><td><b>Gemini</b><br><span class="dim">구글 · 권장</span></td><td>무료 한도</td><td>위 순서</td><td>키 <code>AIza…</code><br>모델 비워 두면 <code>gemini-2.5-flash</code></td></tr>
+<tr><td><b>OpenAI</b></td><td>사용량 과금</td><td>platform.openai.com → API keys → Create new secret key. 결제 수단 등록이 필요합니다</td><td>키 <code>sk-…</code><br>모델 <code>gpt-4.1-mini</code></td></tr>
+<tr><td><b>Claude API</b><br><span class="dim">Anthropic</span></td><td>사용량 과금</td><td>console.anthropic.com → API Keys</td><td>키 <code>sk-ant-…</code><br>모델 <code>claude-sonnet-5</code></td></tr>
+<tr><td><b>Claude Code</b></td><td>Claude 구독에 포함</td><td>이 PC 에 Claude Code 가 설치·로그인돼 있으면 <b>따로 넣을 것이 없습니다</b>(개발자·구독자용)</td><td>없음</td></tr>
 <tr><td><b>xAI Grok</b></td><td>사용량 과금<br><span class="dim">X 구독과 별개</span></td><td>console.x.ai 에서 API 키 발급</td><td>키 <code>xai-…</code><br>모델 <code>grok-4-3</code></td></tr>
+<tr><td><b>Ollama</b><br><span class="dim">내 PC</span></td><td>완전 무료</td><td>ollama.com 에서 설치 → 명령창에 <code>ollama pull qwen2.5:14b</code>. 인터넷 없이 돌지만 느리고 메모리(16GB 이상)를 씁니다</td><td>주소 <code>http://127.0.0.1:11434</code><br>모델 <code>qwen2.5:14b</code></td></tr>
+<tr><td><b>기타</b><br><span class="dim">OpenAI 호환</span></td><td>서비스마다</td><td>목록에 없는 AI. 아래 참고</td><td>주소 · 키 · 모델명</td></tr>
+<tr><td><b>AI 없이</b></td><td>무료</td><td>키 없이 시작. 구간은 말이 촘촘한 곳을 규칙으로 고르고 훅 제목·문안은 편집기에서 직접 씁니다. 품질은 낮습니다</td><td>없음</td></tr>
 </table>
 
-<h4 style="margin:18px 0 6px">넣는 순서</h4>
-<ol>
-<li>홈 아래 <b>AI 설정</b> 칸을 펼칩니다.</li>
-<li>타일 여섯 개 중 하나를 누릅니다. 고른 타일 아래에만 입력 칸이 나타납니다.</li>
-<li>API 키를 붙여 넣습니다. <b>모델 칸은 비워 두셔도 됩니다</b> — 비우면 위 표의 기본값이 쓰입니다.</li>
-<li><span class="btn">저장</span> 을 누릅니다. 칸에 연결 상태가 표시됩니다.</li>
-</ol>
+<h4 style="margin:18px 0 6px">목록에 없는 AI — 「기타(OpenAI 호환)」</h4>
+<div class="shot"><img src="img/10_ai_compat.jpg" alt="「기타」 타일 — 주소·키·모델명 세 칸" loading="lazy"><div class="cap">「기타」 타일 — 주소·키·모델명 세 칸</div></div>
+<p>요즘 AI 서비스는 대부분 OpenAI 와 같은 규격의 주소를 내줍니다. 그래서 <b>주소 · 키 · 모델명</b> 세 칸만 채우면 DeepSeek, Groq, Mistral, Together, LM Studio(내 PC) 같은 곳이 다 붙습니다. 어느 AI 든 하나로 쓰고 싶으면 <b>OpenRouter</b> 가 가장 간단합니다: <a href="https://openrouter.ai" target="_blank" rel="noopener">openrouter.ai</a> 가입 → Keys 에서 키 하나 → 주소 <code>https://openrouter.ai/api/v1</code>, 모델 예 <code>openai/gpt-4.1-mini</code> 또는 <code>google/gemini-2.5-flash</code>. 모델 이름은 그 서비스 문서에 적힌 대로 그대로 넣습니다.</p>
 
-<div class="note"><b>키는 이 PC 의 설정 파일에만 저장되고 어디로도 보내지 않습니다.</b> 저장된 키는 화면에 다시 보이지 않으며, 바꾸려면 새 키를 넣고 저장하면 됩니다.</div>
+<h4 style="margin:18px 0 6px">막힐 때</h4>
+<ul>
+<li><b>「✕ 실패 — 키가 틀렸거나 만료」</b>: 발급 페이지에서 키를 다시 복사해 붙여 넣으세요. 앞뒤 공백이 들어가면 실패합니다.</li>
+<li><b>「✕ 실패 — 한도·잔액」</b>: 무료 한도가 찼거나 결제 잔액이 없습니다. 잠시 뒤 다시 하거나 다른 AI 타일로 바꿉니다.</li>
+<li><b>「✕ 실패 — 모델 이름」</b>: 모델 칸을 비워 기본값을 쓰거나, 서비스 문서의 이름을 그대로 적습니다.</li>
+<li><b>「✕ 실패 — 주소 연결」</b>: 인터넷 연결, 주소 철자, Ollama 라면 실행 여부를 봅니다.</li>
+<li>키는 이 PC 의 설정 파일에만 저장되고 어디로도 보내지 않습니다. 저장된 키는 화면에 가려서 보이고, 바꾸려면 새 키를 넣고 저장하면 됩니다.</li>
+</ul>
 
 <h4 style="margin:18px 0 6px">깊이 (롱폼 → 쇼츠)</h4>
 <p>「롱폼 → 쇼츠」에는 <b>깊이</b>를 고르는 칸이 따로 있습니다. AI 가 얼마나 오래 생각할지입니다.</p>

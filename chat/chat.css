@@ -1,0 +1,29 @@
+/* 쇼츠컷 안내 챗 — 사이트 팔레트(--bg2 --line --fg --acc --gold) 위에 얹는다 */
+.scc-fab{position:fixed;right:18px;bottom:18px;z-index:9000;display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border:0;border-radius:999px;background:var(--acc,#ff5c6c);color:#fff;font:700 15px/1 "Pretendard","Malgun Gothic","Apple SD Gothic Neo",sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.45);cursor:pointer}
+.scc-fab:hover{filter:brightness(1.08)}
+.scc-fab.on{background:#3a4456}
+.scc-fab:focus-visible,.scc-chip:focus-visible,.scc-send:focus-visible,.scc-x:focus-visible{outline:3px solid var(--gold,#ffd166);outline-offset:2px}
+.scc-box{position:fixed;right:18px;bottom:74px;z-index:9001;width:min(380px,calc(100vw - 24px));height:min(560px,calc(100vh - 100px));display:flex;flex-direction:column;background:var(--bg2,#121722);color:var(--fg,#eef0f5);border:1px solid var(--line,#232b3a);border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.55);font-family:"Pretendard","Malgun Gothic","Apple SD Gothic Neo",sans-serif;overflow:hidden}
+.scc-head{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line,#232b3a);background:var(--bg3,#181e2b)}
+.scc-head b{font-size:15px}
+.scc-sub{color:var(--dim,#8b93a6);font-size:12px;flex:1}
+.scc-x{border:0;background:transparent;color:var(--dim,#8b93a6);font-size:16px;cursor:pointer;padding:4px 6px;border-radius:6px}
+.scc-x:hover{color:var(--fg,#fff);background:var(--line,#232b3a)}
+.scc-log{flex:1;overflow-y:auto;padding:14px 12px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+.scc-msg{max-width:88%;padding:10px 13px;border-radius:14px;font-size:14px;line-height:1.55;word-break:keep-all;overflow-wrap:anywhere}
+.scc-msg.bot{align-self:flex-start;background:var(--bg3,#181e2b);border:1px solid var(--line,#232b3a);border-bottom-left-radius:4px}
+.scc-msg.me{align-self:flex-end;background:var(--acc,#ff5c6c);color:#fff;border-bottom-right-radius:4px}
+.scc-msg a{color:var(--gold,#ffd166)}
+.scc-link{margin-top:8px;font-weight:700;display:flex;gap:12px;flex-wrap:wrap}
+.scc-chips{display:flex;gap:6px;flex-wrap:wrap;padding:0 12px 8px}
+.scc-chip{border:1px solid var(--line,#232b3a);background:transparent;color:var(--fg2,#c3c8d4);border-radius:999px;padding:6px 10px;font-size:12.5px;cursor:pointer}
+.scc-chip:hover{border-color:var(--gold,#ffd166);color:var(--fg,#fff)}
+.scc-form{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line,#232b3a)}
+.scc-in{flex:1;min-width:0;background:var(--bg,#0b0e14);color:var(--fg,#eef0f5);border:1px solid var(--line,#232b3a);border-radius:10px;padding:10px 12px;font-size:14px}
+.scc-in:focus{outline:none;border-color:var(--gold,#ffd166)}
+.scc-send{border:0;border-radius:10px;background:var(--acc,#ff5c6c);color:#fff;font-weight:800;padding:0 14px;cursor:pointer}
+.scc-foot{display:flex;gap:14px;justify-content:center;padding:8px;font-size:12.5px;border-top:1px solid var(--line,#232b3a);background:var(--bg3,#181e2b)}
+.scc-foot a{color:var(--dim,#8b93a6);text-decoration:none}
+.scc-foot a:hover{color:var(--gold,#ffd166)}
+@media (max-width:480px){.scc-fab span{display:none}.scc-fab{padding:12px 14px}.scc-box{right:12px;bottom:66px}}
+@media (prefers-reduced-motion:reduce){.scc-log{scroll-behavior:auto}}

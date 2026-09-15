@@ -1,8 +1,8 @@
 {
- "version": "1.0.2",
- "url": "https://shortscut.kr/dl/shortscut-1.0.2-update.zip",
- "notes": "소재함·무료 소재(Pexels·Pixabay)·효과 탭(씬 전환 58종·무작위·위층 조각 효과)·자막 효과(나타나기·사라지기·강조)·가리기 구간 지정·칸 너비 손잡이·미리보기 클릭 재생·텍스트 바로 고치기·7일 체험판",
- "date": "2026-09-14",
- "size": 507458,
- "sha256": "bd7bf03eec35a581dd7651c0e4a806163ffd6678312b1c40c4ff40f8c0108973"
+ "version": "1.0.3",
+ "url": "https://shortscut.kr/dl/shortscut-1.0.3-update.zip",
+ "notes": "AI 설정 첫 안내·기타(OpenAI 호환)·AI 없이·연결 확인 · 오디오 선택 시 AI 설정 사라지던 버그 수정 · 효과 타일 미리보기 선생성 · 홈 카드 마우스 미리보기 · 필름스트립 빈 요청 수정 · 가로 롱폼 편집기에서 「앱 화면 겹쳐 보기」 단추 숨김(세로 쇼츠 전용)",
+ "date": "2026-09-15",
+ "size": 516521,
+ "sha256": "1031bbf9b39224c0ad9f502cd6cccbfde9a1607f087956f97748c81490bc2aa7"
 }

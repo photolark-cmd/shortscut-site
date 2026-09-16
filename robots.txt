@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shortscut.kr/sitemap.xml

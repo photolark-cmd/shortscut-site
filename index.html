@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<title>쇼츠컷 ShortsCut — 내 PC에서 만드는 쇼핑 쇼츠·롱폼→쇼츠</title>
+<style>.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}@media(max-width:760px){.card-grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.card-grid{grid-template-columns:1fr}}.card-item{display:block;text-decoration:none;color:inherit;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:12px;transition:transform .15s,border-color .15s}.card-item:hover{transform:translateY(-3px);border-color:var(--gold)}.card-item img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:left top;border-radius:8px;box-shadow:0 10px 26px rgba(0,0,0,.45)}.card-item b{display:block;margin-top:12px;font-size:15px;line-height:1.35;color:var(--fg)}.card-item span{display:block;margin-top:5px;font-size:12.5px;line-height:1.55;color:var(--dim)}#cardDlg{border:0;padding:0;background:transparent;max-width:min(96vw,1000px);width:min(96vw,1000px);max-height:96vh;overflow:auto;border-radius:12px}#cardDlg::backdrop{background:rgba(0,0,0,.82)}#cardDlg img{display:block;width:100%;height:auto;border-radius:12px}#cardDlg p{margin:10px 4px 0;text-align:center}.card-x{position:sticky;top:8px;float:right;margin:8px;z-index:2;background:rgba(0,0,0,.65);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:999px;width:36px;height:36px;cursor:pointer;font-size:16px}</style><title>쇼츠컷 ShortsCut — 내 PC에서 만드는 쇼핑 쇼츠·롱폼→쇼츠</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -130,15 +130,7 @@ td.y{color:var(--ok);font-weight:700}td.n{color:var(--dim)}
 .guide b{color:#c4b5fd}
 </style>
 
-<style>
-.legalfoot{margin-top:26px;padding-top:20px;border-top:1px solid #232b3a;
-  font:400 13px/1.95 "Noto Sans KR","Malgun Gothic",sans-serif;color:#8b93a6;letter-spacing:0}
-.legalfoot b{color:#c3c8d4;font-weight:700}
-.legalfoot a{color:#ffd166;text-decoration:none}
-.legalfoot a:hover{text-decoration:underline}
-.legalfoot .todo{color:#ff8a95;background:rgba(255,92,108,.12);
-  border:1px dashed rgba(255,92,108,.5);border-radius:6px;padding:1px 7px;font-size:12px}
-</style></head>
+</head>
 <body>
 <div class="page" lang="ko" translate="no">
 
@@ -158,6 +150,7 @@ td.y{color:var(--ok);font-weight:700}td.n{color:var(--dim)}
 
 <p style="margin:18px 44px 0;font-size:16px;display:flex;gap:10px 18px;align-items:center;flex-wrap:wrap"><a href="guide/" style="color:var(--gold);font-weight:700">📖 상세 안내(설명서) 보기 →</a><a id="openApp" href="http://127.0.0.1:8796/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;background:var(--acc);color:#fff;font-weight:800;text-decoration:none">🎬 편집기 열기</a><span id="appNote" style="color:var(--dim);font-size:13px">쇼츠컷이 설치돼 켜져 있는 PC 에서 새 탭으로 열립니다. 아직 없으면 아래에서 7일 무료 체험을 신청하세요.</span></p>
 <section id="demo"><div class="eyebrow">Demo</div><h2>3분 시연으로 먼저 보기</h2><p style="color:var(--fg2)">실제 프로그램 화면을 그대로 녹화한 3부작입니다. 기다림 구간만 빨리감기했고, 나온 결과물은 편집하지 않았습니다.</p><div class="pains" style="margin-top:18px"><div><div style="aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/2WTV6-vBAbU?rel=0" title="1부 · 롱폼 하나로 쇼츠 10개" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;display:block"></iframe></div><b style="display:block;margin-top:10px">1부 · 롱폼 하나로 쇼츠 10개</b><span class="small dim" style="display:block;margin-top:4px">링크 붙이기 → AI 구간 선정 → 편집 → 열 개 내보내기. 손이 가는 건 세 번.</span></div><div><div style="aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/WLQ4JEV2Jmw?rel=0" title="2부 · 쇼핑 쇼츠" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;display:block"></iframe></div><b style="display:block;margin-top:10px">2부 · 쇼핑 쇼츠</b><span class="small dim" style="display:block;margin-top:4px">제품 영상 몇 개와 대본 하나로 낭독·자막·광고 표시까지.</span></div><div><div style="aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000"><iframe src="https://www.youtube-nocookie.com/embed/dsg9unkdS78?rel=0" title="3부 · 가로 영상도 같은 편집기로" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;display:block"></iframe></div><b style="display:block;margin-top:10px">3부 · 가로 영상도 같은 편집기로</b><span class="small dim" style="display:block;margin-top:4px">무료 소재 검색, 전환 무작위, 자막 효과, 텍스트, 음악.</span></div></div><p class="small dim" style="margin-top:12px">영상에서 보신 기능은 <a href="#trial" style="color:var(--gold)">7일 무료 체험</a>에서 전부 열립니다.</p></section>
+<section id="cards"><div class="eyebrow">At a glance</div><h2>한눈에 보기</h2><p style="color:var(--fg2)">화면 캡처로 만든 안내 카드 세 장입니다. 누르면 크게 열립니다.</p><div class="card-grid"><a href="images/cards/02_range.jpg" class="card-item" data-title="이 프로그램 하나로 여기까지"><img src="images/cards/02_range_thumb.jpg" alt="이 프로그램 하나로 여기까지" loading="lazy"><b>이 프로그램 하나로 여기까지</b><span>롱폼→쇼츠 · 쇼핑 쇼츠 · 가로 편집이 한 편집기. 씬 전환 58종, 자막마다 효과, 유튜브 화면 겹쳐 보기, 제휴 링크 자동 변환, 무료 소재 검색.</span></a><a href="images/cards/03_compare.jpg" class="card-item" data-title="다른 프로그램과 무엇이 다른가"><img src="images/cards/03_compare_thumb.jpg" alt="다른 프로그램과 무엇이 다른가" loading="lazy"><b>다른 프로그램과 무엇이 다른가</b><span>월 구독 웹 서비스·무료 편집 앱과 9개 항목 비교 — 월 요금 없음, 사용량 제한 없음, 파일은 내 PC에만.</span></a><a href="images/cards/05_pcscore.jpg" class="card-item" data-title="내 컴퓨터로 될까? 점수부터"><img src="images/cards/05_pcscore_thumb.jpg" alt="내 컴퓨터로 될까? 점수부터" loading="lazy"><b>내 컴퓨터로 될까? 점수부터</b><span>켜자마자 CPU·메모리·그래픽·디스크를 읽어 100점 만점 점수와 기능별 예상 속도를 보여 줍니다. 최소 4코어·8GB·내장 그래픽.</span></a></div><dialog id="cardDlg"><button type="button" class="card-x" aria-label="닫기">✕</button><img alt=""><p class="small dim"></p></dialog><script>(function(){var d=document.getElementById("cardDlg");if(!d||!d.showModal)return;var im=d.querySelector("img"),cp=d.querySelector("p");document.querySelectorAll(".card-item").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();im.src=a.getAttribute("href");im.alt=a.dataset.title;cp.textContent=a.dataset.title;d.showModal()})});d.querySelector(".card-x").addEventListener("click",function(){d.close()});d.addEventListener("click",function(e){if(e.target===d)d.close()});d.addEventListener("close",function(){im.src=""})})();</script></section>
 <section>
   <div class="eyebrow">Who</div>
   <h2>이런 분이 쓰면 <em>바로 시간이 남습니다</em></h2>
@@ -318,10 +311,10 @@ td.y{color:var(--ok);font-weight:700}td.n{color:var(--dim)}
   </div>
 </section>
 
-<div class="foot">쇼츠컷 ShortsCut · shortscut.kr · <a href="guide/" style="color:var(--gold);font-weight:700">📖 상세 안내(설명서)</a> · 캡처는 실제 프로그램 화면(채널명은 가림) · 체험 신청과 문의는 <a href="#trial" style="color:var(--gold)">7일 무료 체험</a> · <img class="hits" src="https://hits.sh/shortscut.kr.svg?view=today-total&amp;style=flat-square&amp;label=%EB%B0%A9%EB%AC%B8%20%EC%98%A4%EB%8A%98%2F%EC%A0%84%EC%B2%B4&amp;color=ff3b3b&amp;labelColor=1f2937" alt="방문 수(오늘/전체)" height="20" loading="eager" style="vertical-align:middle;height:20px;border-radius:4px"></div><!--legal--><div class="legalfoot"><b>동화기획</b> · 대표 김경하 · 사업자등록번호 608-09-36630 (<a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=6080936630" target="_blank" rel="noopener">사업자정보 확인</a>)<br>통신판매업 신고 015-서울금천-1043 · 주소 서울특별시 금천구 독산로51길 45, 2층(독산동)<br>전화 050-6683-5882 · 이메일 photolark@gmail.com · 호스팅서비스 제공자 GitHub, Inc.<br><a href="/terms/">이용약관</a> · <a href="/privacy/"><b>개인정보처리방침</b></a> · <a href="/refund/">청약철회·환불</a></div><!--/legal-->
+<div class="foot">쇼츠컷 ShortsCut · shortscut.kr · <a href="guide/" style="color:var(--gold);font-weight:700">📖 상세 안내(설명서)</a> · 캡처는 실제 프로그램 화면(채널명은 가림) · 체험 신청과 문의는 <a href="#trial" style="color:var(--gold)">7일 무료 체험</a> · <img class="hits" src="https://hits.sh/shortscut.kr.svg?view=today-total&amp;style=flat-square&amp;label=%EB%B0%A9%EB%AC%B8%20%EC%98%A4%EB%8A%98%2F%EC%A0%84%EC%B2%B4&amp;color=ff3b3b&amp;labelColor=1f2937" alt="방문 수(오늘/전체)" height="20" loading="eager" style="vertical-align:middle;height:20px;border-radius:4px"></div>
 </div>
 <link rel="stylesheet" href="chat/chat.css">
-<script>window.SCC_VER="202609151442"</script>
+<script>window.SCC_VER="202609160926"</script>
 <script src="chat/chat.js" defer></script>
 </body>
 </html>

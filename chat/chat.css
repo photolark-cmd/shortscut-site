@@ -4,6 +4,9 @@
 .scc-fab.on{background:#3a4456}
 .scc-fab:focus-visible,.scc-chip:focus-visible,.scc-send:focus-visible,.scc-x:focus-visible{outline:3px solid var(--gold,#ffd166);outline-offset:2px}
 .scc-box{position:fixed;right:18px;bottom:74px;z-index:9001;width:min(380px,calc(100vw - 24px));height:min(560px,calc(100vh - 100px));display:flex;flex-direction:column;background:var(--bg2,#121722);color:var(--fg,#eef0f5);border:1px solid var(--line,#232b3a);border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.55);font-family:"Pretendard","Malgun Gothic","Apple SD Gothic Neo",sans-serif;overflow:hidden}
+/* 2026-09-18: box.hidden 이 무시돼 챗이 항상 열려 있었다(모바일에서 화면을 덮음).
+   .scc-box 의 display:flex 가 UA 의 [hidden]{display:none} 을 이겨서다. 명시적으로 닫는다. */
+.scc-box[hidden]{display:none}
 .scc-head{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line,#232b3a);background:var(--bg3,#181e2b)}
 .scc-head b{font-size:15px}
 .scc-sub{color:var(--dim,#8b93a6);font-size:12px;flex:1}
@@ -25,5 +28,7 @@
 .scc-foot{display:flex;gap:14px;justify-content:center;padding:8px;font-size:12.5px;border-top:1px solid var(--line,#232b3a);background:var(--bg3,#181e2b)}
 .scc-foot a{color:var(--dim,#8b93a6);text-decoration:none}
 .scc-foot a:hover{color:var(--gold,#ffd166)}
-@media (max-width:480px){.scc-fab span{display:none}.scc-fab{padding:12px 14px}.scc-box{right:12px;bottom:66px}}
+@media (max-width:480px){.scc-fab span{display:none}.scc-fab{padding:12px 14px}
+  /* 모바일은 아래에서 올라오는 시트로. 화면을 다 덮지 않게 높이를 잘라 둔다(주소창 때문에 vh 가 아니라 dvh). */
+  .scc-box{left:12px;right:12px;bottom:72px;width:auto;height:min(520px,calc(100vh - 150px));height:min(520px,72dvh);max-height:calc(100dvh - 120px)}}
 @media (prefers-reduced-motion:reduce){.scc-log{scroll-behavior:auto}}
